@@ -1,6 +1,5 @@
 # sankey-budget
 A way to create quick budget overviews, like the one shared on `r/dataisbeautiful` [here](https://www.reddit.com/r/dataisbeautiful/comments/otxlbo/apples_latest_quarter_visualized_oc/).
-![](https://preview.redd.it/aroneu5vm5e71.jpg?width=960&crop=smart&auto=webp&s=bb43a762b51c3fdbfba0055ad142078a60b0b3cc)
 
 **1. Produce a list of all transactions**<br>
 [transactions.csv](transactions.csv)<br>
