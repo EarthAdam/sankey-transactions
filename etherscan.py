@@ -43,6 +43,24 @@ print(new_sources)
 print(new_targets)
 print(new_values)
 
+names = set(new_sources + new_targets)
+nameList = []
+for idx, n in enumerate(names):
+    if n not in nameList:
+        nameList.append(n)
+print(nameList)
+
+int_sources = []
+for ns in new_sources:
+    int_sources.append(nameList.index(ns))
+
+int_targets = []
+for nt in new_targets:
+    int_targets.append(nameList.index(nt))
+
+print(int_sources)
+print(int_targets)
+
 # print(tabulate(transactions))
 print(tabulate(totals))
 
@@ -51,13 +69,14 @@ fig = go.Figure(data=[go.Sankey(
     node = dict(
       pad = 15,
       thickness = 20,
-      line = dict(color = "black", width = 0.5)
+      line = dict(color = "black", width = 0.5),
+      label = nameList
     ),
     link = dict(
-      source = new_sources,
-      target = new_targets,
+      source = int_sources,
+      target = int_targets,
       value = new_values
   ))])
 fig.update_layout(title_text="Transactions with account: 0x34BD8A7AE5369B71380B88157e01372182A10638", font_size=10)
-fig.show()
+#fig.show()
 fig.write_html('index.html')
