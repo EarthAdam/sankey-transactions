@@ -1,9 +1,20 @@
-# sankey-budget
-A way to create quick budget overviews, like the one shared on `r/dataisbeautiful` [here](https://www.reddit.com/r/dataisbeautiful/comments/otxlbo/apples_latest_quarter_visualized_oc/).
+# sankey-transactions
+A way to create an overview of transactions into and out of an account, similar to the one shared on `r/dataisbeautiful` [here](https://www.reddit.com/r/dataisbeautiful/comments/otxlbo/apples_latest_quarter_visualized_oc/).
 
+### Example Use-Case: Transactions associated with an Ethereum address
+![](eth_account.png)
+
+---
+## How to use (with Eth address)
+1. Enter desired ETH address up at the top of etherscan.py
+2. Run `python etherscan.py`
+3. Open the index.html page
+
+---
+## How to use (for manual transaction exports)
 **1. Produce a list of all transactions**<br>
 [transactions.csv](transactions.csv)<br>
-(This is just something you have to do manually on your bank's site )<br><br>
+(Export from bank, needs some cleaning tho)<br><br>
 
 **2. Manually create SOURCE and TARGET values for each transaction**<br>
 [accounts.csv](accounts.csv)<br> (Also something you just have to manually create for now)<br><br>
