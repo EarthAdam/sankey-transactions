@@ -6,11 +6,12 @@ from tabulate import tabulate
 import plotly.graph_objects as go
 import numpy as np
 
-#url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x34BD8A7AE5369B71380B88157e01372182A10638&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=ZQJQDAY6SGPA5GN5XBDMPH65MTCD2FZNSI'
-#response = urlopen(url)
+eth_addr = '0xf1a7f8dc3f7777bae90b551be397416fe2954fc6'
+url = 'https://api.etherscan.io/api?module=account&action=txlist&address='+eth_addr+'&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=ZQJQDAY6SGPA5GN5XBDMPH65MTCD2FZNSI'
+response = urlopen(url)
 
 xs = open('transactions.json')
-x = json.loads(xs.read())
+x = json.loads(response.read())
 
 transactions = []
 for y in x["result"]:
@@ -77,6 +78,6 @@ fig = go.Figure(data=[go.Sankey(
       target = int_targets,
       value = new_values
   ))])
-fig.update_layout(title_text="Transactions with account: 0x34BD8A7AE5369B71380B88157e01372182A10638", font_size=10)
+fig.update_layout(title_text="Transactions with account: "+eth_addr, font_size=10)
 #fig.show()
 fig.write_html('index.html')
