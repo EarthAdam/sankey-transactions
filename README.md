@@ -6,9 +6,8 @@ Here is the not-as-pretty thing that this code actually spits out as a web page 
 
 ---
 
-## Example Use-Case: Transactions associated with an Ethereum address (see image at bottom)
-
-### How to use (with Eth address)
+### Example Use-Case: Transactions associated with an Ethereum address
+**How to use (with Eth address)**
 1. Enter desired ETH address up at the top of etherscan.py
 2. Run `python etherscan.py`
 3. Open the index.html page
