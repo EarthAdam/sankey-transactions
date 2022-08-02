@@ -5,6 +5,9 @@ Here is the not-as-pretty thing that this code actually spits out as a web page 
 ![](appleplot.png)
 
 ---
+#### Another Example: [Flow of Global Climate Funds](https://www.carbonbrief.org/interactive-how-climate-finance-flows-around-the-world/)
+
+---
 
 ### Example Use-Case: Transactions associated with an Ethereum address
 **How to use (with Eth address)**
